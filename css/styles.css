@@ -1,8 +1,16 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #fff;
   font-family: 'Roboto', sans-serif;
   color: #434455;
   line-height: 1.5;
+  width: 1440px;
+  margin: 0;
 }
 
 a {
@@ -12,6 +20,9 @@ a {
 
 ul {
   list-style-type: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
 }
 
 h2,
@@ -19,10 +30,21 @@ h3 {
   color: #2e2f42;
 }
 
-/* Header */
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
 
-.header-logo-link,
-.footer-logo-link {
+/* Header */
+.header-container {
+  display: flex;
+  flex-direction: row;
+  padding: 24px 156px;
+}
+
+.header-logo-link {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 18px;
@@ -30,6 +52,7 @@ h3 {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
+  margin-right: 76px;
 }
 
 .header-logo-title {
@@ -40,6 +63,18 @@ h3 {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #2e2f42;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  margin-right: 332px;
+}
+
+.navigation-list {
+  display: flex;
+  flex-direction: row;
+  column-gap: 40px;
 }
 
 .navigation-list-link {
@@ -58,6 +93,12 @@ h3 {
   font-style: normal;
 }
 
+.contacts-list {
+  display: flex;
+  flex-direction: row;
+  column-gap: 40px;
+}
+
 .contacts-link {
   font-weight: 400;
   font-size: 16px;
@@ -74,6 +115,7 @@ h3 {
 
 .topic {
   background-color: #2e2f42;
+  padding: 188px 0;
 }
 
 .topic-title {
@@ -83,6 +125,8 @@ h3 {
   letter-spacing: 0.02em;
   color: #fff;
   text-align: center;
+  margin-left: 472px;
+  margin-right: 472px;
 }
 
 .button {
@@ -94,6 +138,9 @@ h3 {
   letter-spacing: 0.04em;
   color: #fff;
   line-height: 1.5;
+  padding: 16px 32px;
+  margin-left: 636px;
+  margin-top: 48px;
 }
 
 .button:hover,
@@ -103,8 +150,22 @@ h3 {
 
 /* Section 2 */
 
+.advantages {
+  padding: 120px 156px;
+}
+
 .advantages-title {
   visibility: hidden;
+}
+
+.advantages-list {
+  display: flex;
+  flex-direction: row;
+  column-gap: 24px;
+}
+
+.advantages-item {
+  width: 264px;
 }
 
 .advantages-item-title {
@@ -118,12 +179,14 @@ h3 {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  margin-top: 8px;
 }
 
 /* Section 3 */
 
 .team {
   background: #f4f4fd;
+  padding: 120px 156px;
 }
 
 .team-title {
@@ -133,6 +196,13 @@ h3 {
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-align: center;
+  margin-bottom: 72px;
+}
+
+.team-list {
+  display: flex;
+  flex-direction: row;
+  column-gap: 24px;
 }
 
 .team-member {
@@ -144,14 +214,23 @@ h3 {
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  text-align: center;
+  margin-top: 32px;
+  margin-bottom: 8px;
 }
 
 .team-member-position {
   font-size: 16px;
   letter-spacing: 0.02em;
+  text-align: center;
+  margin-bottom: 32px;
 }
 
 /* Section 4 */
+
+.portfolio {
+  padding: 120px 156px;
+}
 
 .portfolio-title {
   font-weight: 700;
@@ -160,6 +239,20 @@ h3 {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   text-align: center;
+  margin-bottom: 72px;
+}
+
+.portfolio-list-one {
+  display: flex;
+  flex-direction: row;
+  column-gap: 24px;
+  margin-bottom: 48px;
+}
+
+.portfolio-list-second {
+  display: flex;
+  flex-direction: row;
+  column-gap: 24px;
 }
 
 .portfolio-item-title {
@@ -167,17 +260,26 @@ h3 {
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  margin-left: 16px;
+  margin-top: 32px;
+  margin-bottom: 8px;
 }
 
 .portfolio-item-content {
   font-size: 16px;
   letter-spacing: 0.02em;
+  margin-left: 16px;
+  margin-bottom: 32px;
 }
 
 /* Footer */
 
 .footer-container {
   background: #2e2f42;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 156px;
+  padding-right: 1020px;
 }
 
 .footer-logo-title {
@@ -190,7 +292,18 @@ h3 {
   color: #f4f4fd;
 }
 
+.footer-logo-link {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #4d5ae5;
+}
+
 .footer-content {
+  margin-top: 16px;
   font-size: 16px;
   letter-spacing: 0.02em;
   color: #f4f4fd;
