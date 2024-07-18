@@ -9,7 +9,6 @@ body {
   font-family: 'Roboto', sans-serif;
   color: #434455;
   line-height: 1.5;
-  width: 1440px;
   margin: 0;
 }
 
@@ -37,11 +36,25 @@ p {
   margin: 0;
 }
 
+img {
+  display: block;
+}
+
+.container {
+  max-width: 1440px;
+  padding-left: 156px;
+  padding-right: 156px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Header */
-.header-container {
+.header-container .container {
   display: flex;
   flex-direction: row;
-  padding: 24px 156px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e7e9fc;
 }
 
 .header-logo-link {
@@ -68,13 +81,13 @@ p {
 .navigation {
   display: flex;
   flex-direction: row;
-  margin-right: 332px;
 }
 
 .navigation-list {
   display: flex;
   flex-direction: row;
-  column-gap: 40px;
+  gap: 40px;
+  margin-right: 332px;
 }
 
 .navigation-list-link {
@@ -96,7 +109,7 @@ p {
 .contacts-list {
   display: flex;
   flex-direction: row;
-  column-gap: 40px;
+  gap: 40px;
 }
 
 .contacts-link {
@@ -111,11 +124,17 @@ p {
   color: #404bbf;
 }
 
+section:not(.topic) {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
 /* Section 1 */
 
 .topic {
   background-color: #2e2f42;
-  padding: 188px 0;
+  padding-top: 188px;
+  padding-bottom: 188px;
 }
 
 .topic-title {
@@ -125,8 +144,9 @@ p {
   letter-spacing: 0.02em;
   color: #fff;
   text-align: center;
-  margin-left: 472px;
-  margin-right: 472px;
+  padding-left: 316px;
+  padding-right: 316px;
+  margin-bottom: 48px;
 }
 
 .button {
@@ -138,9 +158,11 @@ p {
   letter-spacing: 0.04em;
   color: #fff;
   line-height: 1.5;
+  border-radius: 4px;
   padding: 16px 32px;
-  margin-left: 636px;
-  margin-top: 48px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  display: block;
+  margin: 0 auto;
 }
 
 .button:hover,
@@ -150,22 +172,24 @@ p {
 
 /* Section 2 */
 
-.advantages {
-  padding: 120px 156px;
-}
-
 .advantages-title {
+  display: none;
   visibility: hidden;
 }
 
 .advantages-list {
   display: flex;
   flex-direction: row;
-  column-gap: 24px;
+  gap: 24px;
 }
 
 .advantages-item {
-  width: 264px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: calc((100% - 72px) / 4);
+  gap: 8px;
 }
 
 .advantages-item-title {
@@ -179,14 +203,12 @@ p {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  margin-top: 8px;
 }
 
 /* Section 3 */
 
 .team {
   background: #f4f4fd;
-  padding: 120px 156px;
 }
 
 .team-title {
@@ -202,11 +224,14 @@ p {
 .team-list {
   display: flex;
   flex-direction: row;
-  column-gap: 24px;
+  gap: 24px;
 }
 
 .team-member {
   background: #fff;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
 .team-member-name {
@@ -215,7 +240,7 @@ p {
   line-height: 1.2;
   letter-spacing: 0.02em;
   text-align: center;
-  margin-top: 32px;
+  padding-top: 32px;
   margin-bottom: 8px;
 }
 
@@ -223,7 +248,7 @@ p {
   font-size: 16px;
   letter-spacing: 0.02em;
   text-align: center;
-  margin-bottom: 32px;
+  padding-bottom: 32px;
 }
 
 /* Section 4 */
@@ -242,17 +267,19 @@ p {
   margin-bottom: 72px;
 }
 
-.portfolio-list-one {
+.portfolio-list {
   display: flex;
   flex-direction: row;
   column-gap: 24px;
-  margin-bottom: 48px;
+  flex-wrap: wrap;
+  row-gap: 48px;
 }
 
-.portfolio-list-second {
-  display: flex;
-  flex-direction: row;
-  column-gap: 24px;
+.portfolio-item-text {
+  border-bottom: 1px solid #e7e9fc;
+  border-left: 1px solid #e7e9fc;
+  border-right: 1px solid #e7e9fc;
+  padding: 32px 16px;
 }
 
 .portfolio-item-title {
@@ -260,16 +287,12 @@ p {
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  margin-left: 16px;
-  margin-top: 32px;
   margin-bottom: 8px;
 }
 
 .portfolio-item-content {
   font-size: 16px;
   letter-spacing: 0.02em;
-  margin-left: 16px;
-  margin-bottom: 32px;
 }
 
 /* Footer */
@@ -278,8 +301,6 @@ p {
   background: #2e2f42;
   padding-top: 100px;
   padding-bottom: 100px;
-  padding-left: 156px;
-  padding-right: 1020px;
 }
 
 .footer-logo-title {
@@ -303,8 +324,9 @@ p {
 }
 
 .footer-content {
-  margin-top: 16px;
   font-size: 16px;
   letter-spacing: 0.02em;
   color: #f4f4fd;
+  margin-top: 16px;
+  padding-right: 864px;
 }
