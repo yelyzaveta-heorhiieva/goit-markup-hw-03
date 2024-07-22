@@ -50,8 +50,6 @@ img {
 .header-container .container {
   display: flex;
   flex-direction: row;
-  padding-top: 24px;
-  padding-bottom: 24px;
 }
 
 .header-container {
@@ -83,6 +81,8 @@ img {
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .navigation-list {
@@ -108,6 +108,8 @@ img {
 
 .contacts {
   font-style: normal;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .contacts-list {
